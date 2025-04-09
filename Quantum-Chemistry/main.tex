@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Quantum Chemistry: A Field-Theoretic and Operator-Based Framework
+% Compatible with amsbook
+% Version: 1.0
+% Date: 2025-04-08
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{amsbook}
+
+% === Core Packages ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+
+% === Layout ===
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multicol}
+
+\usepackage{tikz-cd}
+
+% === Bibliography ===
+\usepackage[backend=biber, style=numeric-comp, sorting=ynt, natbib=true]{biblatex}
+\addbibresource{references.bib}
+
+% === Theorem Environments ===
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% === Hyperref Setup ===
+\hypersetup{
+	colorlinks=true,
+	linkcolor=NavyBlue,
+	citecolor=ForestGreen,
+	filecolor=magenta,
+	urlcolor=DodgerBlue,
+	pdftitle={Quantum Chemistry: A Field-Theoretic and Operator-Based Framework},
+	pdfauthor={Sebastian Dumbrava},
+	pdfpagemode=UseOutlines,
+	bookmarksopen=true,
+	bookmarksnumbered=true
+}
+
+% === Fancyhdr Setup ===
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% === Custom Commands ===
+\providecommand{\dd}{\mathrm{d}}
+\providecommand{\ee}{\mathrm{e}}
+\providecommand{\ii}{\mathrm{i}}
+\newcommand{\Order}[1]{\mathcal{O}(#1)}
+\newcommand{\Malpha}{M_\alpha}
+
+\newcommand{\QFT}{\mathrm{QFT}}
+\newcommand{\QC}{\mathrm{QC}}
+\newcommand{\EFT}{\mathrm{EFT}}
+\newcommand{\QCD}{\mathrm{QCD}}
+\newcommand{\QED}{\mathrm{QED}}
+\newcommand{\BOA}{\mathrm{BOA}}
+
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Fock}{\mathcal{F}}
+
+\newcommand{\vac}{\ket{0}}
+\newcommand{\RefState}{\ket{\text{Ref}}}
+\newcommand{\MolState}[1]{\ket{\Psi_{#1}}}
+
+\newcommand{\Leff}{\mathcal{L}_{\mathrm{eff}}}
+\newcommand{\Mdag}[1]{M^\dagger_{#1}}
+\newcommand{\Mop}[1]{M_{#1}}
+\newcommand{\aop}[1]{a_{#1}}
+\newcommand{\adag}[1]{a^\dagger_{#1}}
+\newcommand{\Aop}[1]{A_{#1}}
+\newcommand{\Adag}[1]{A^\dagger_{#1}}
+\newcommand{\Ham}{\hat{H}}
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\Ccoeff}{C}
+
+% === Metadata ===
+\title{\Huge\textbf{Quantum Chemistry} \\[0.5cm]
+	\Large A Field-Theoretic and Operator-Based Framework \\[1cm]
+	\normalsize\textit{(Development Draft)}}
+\author{Sebastian Dumbrava}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	% --- Title ---
+	\maketitle
+	
+	% --- Front Matter ---
+	\frontmatter
+	
+	\tableofcontents
+	% \listoffigures
+	% \listoftables
+	
+	% --- Main Matter ---
+	\mainmatter
+	
+	% === PART I: FOUNDATIONS ===
+	\part{Foundations and Frameworks}
+	
+	\input{chapters/chapter1_introduction.tex}
+	\input{chapters/chapter2_foundations.tex}
+	\input{chapters/chapter3_qc_standard.tex}
+	
+	% === PART II: MOLECULAR OPERATORS AND EFT ===
+	\part{Molecular Operators and Effective Field Theory}
+	
+	\input{chapters/chapter4_mol_ops.tex}
+	\input{chapters/chapter5_algebra.tex}
+	\input{chapters/chapter6_eft.tex}
+	
+	% === PART III: APPLICATIONS AND OUTLOOK ===
+	\part{Applications and Outlook}
+	
+	\input{chapters/chapter7_path_integral.tex}
+	\input{chapters/chapter8_examples.tex}
+	\input{chapters/chapter9_outlook.tex}
+	
+	% === Appendices ===
+	\appendix
+	\part*{Appendices}
+	
+	\input{appendices/appendix_a_derivations.tex}
+	\input{appendices/appendix_b_notation.tex}
+	\input{appendices/appendix_c_techniques.tex}
+	
+	% --- Back Matter ---
+	\backmatter
+	
+	% Bibliography
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\printbibliography
+	
+	% Optional: \printindex
+	
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

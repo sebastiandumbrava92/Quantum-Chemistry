@@ -1,0 +1,131 @@
+\contentsline {part}{Part\ 1. \enspace \noindent Foundations and Frameworks}{1}{part.1}%
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction — Why Field Theory for Chemistry?}}{3}{chapter.1}%
+\contentsline {section}{\tocsection {}{1}{Motivation: The Two Pillars – QFT and QC}}{3}{section.1.1}%
+\contentsline {section}{\tocsection {}{2}{The Core Idea: Molecules as Composite Quasi-particles}}{3}{section.1.2}%
+\contentsline {section}{\tocsection {}{3}{Scope and Objectives of the Book}}{4}{section.1.3}%
+\contentsline {section}{\tocsection {}{4}{Roadmap: Structure of the Book}}{4}{section.1.4}%
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Mathematical and Physical Foundations}}{7}{chapter.2}%
+\contentsline {section}{\tocsection {}{1}{Hilbert Space, Fock Space, and Occupation Number Representation}}{7}{section.2.1}%
+\contentsline {section}{\tocsection {}{2}{Second Quantization Formalism}}{7}{section.2.2}%
+\contentsline {section}{\tocsection {}{3}{Essentials of Quantum Field Theory (QED Sketch)}}{8}{section.2.3}%
+\contentsline {section}{\tocsection {}{4}{Bound States in Quantum Field Theory}}{8}{section.2.4}%
+\contentsline {section}{\tocsection {}{5}{A Note on Notation and Conventions}}{9}{section.2.5}%
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Quantum Chemistry — Standard Frameworks Revisited}}{11}{chapter.3}%
+\contentsline {section}{\tocsection {}{1}{The Born-Oppenheimer Approximation as Effective Theory}}{11}{section.3.1}%
+\contentsline {section}{\tocsection {}{2}{Electronic Structure Methods: HF, CI, CC, MPn, DFT}}{11}{section.3.2}%
+\contentsline {paragraph}{\tocparagraph {}{}{Hartree-Fock (HF):}}{11}{section*.1}%
+\contentsline {paragraph}{\tocparagraph {}{}{Post-HF Methods:}}{12}{section*.2}%
+\contentsline {paragraph}{\tocparagraph {}{}{Density Functional Theory (DFT):}}{12}{section*.3}%
+\contentsline {section}{\tocsection {}{3}{Relativistic Effects in Quantum Chemistry}}{12}{section.3.3}%
+\contentsline {section}{\tocsection {}{4}{Light-Matter Interactions: Semi-Classical vs. QED}}{12}{section.3.4}%
+\contentsline {section}{\tocsection {}{5}{Identifying Gaps and QFT Connections}}{12}{section.3.5}%
+\contentsline {paragraph}{\tocparagraph {}{}{Connections:}}{12}{section*.4}%
+\contentsline {paragraph}{\tocparagraph {}{}{Gaps:}}{13}{section*.5}%
+\contentsline {part}{Part\ 2. \enspace \noindent Molecular Operators and Effective Field Theory}{15}{part.2}%
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Molecular Creation and Annihilation Operators}}{17}{chapter.4}%
+\contentsline {section}{\tocsection {}{1}{The Chemical Reference State \(\ket {\text {Ref}}\)}}{17}{section.4.1}%
+\contentsline {section}{\tocsection {}{2}{Formal Construction of \(M^\dagger _{\alpha }\)}}{17}{section.4.2}%
+\contentsline {paragraph}{\tocparagraph {}{}{Clarifying Note: Operational vs. Constructive Definitions}}{17}{section*.6}%
+\contentsline {section}{\tocsection {}{3}{Properties of Molecular Operators}}{18}{section.4.3}%
+\contentsline {paragraph}{\tocparagraph {}{}{Adjoint and Annihilation:}}{18}{section*.7}%
+\contentsline {paragraph}{\tocparagraph {}{}{Linearity:}}{18}{section*.8}%
+\contentsline {paragraph}{\tocparagraph {}{}{Normalization:}}{18}{section*.9}%
+\contentsline {paragraph}{\tocparagraph {}{}{Bosonic or Fermionic Statistics:}}{18}{section*.10}%
+\contentsline {section}{\tocsection {}{4}{Example: The Hydrogen Molecule (H\textsubscript {2})}}{18}{section.4.4}%
+\contentsline {paragraph}{\tocparagraph {}{}{Constituents:}}{18}{section*.11}%
+\contentsline {paragraph}{\tocparagraph {}{}{Reference State:}}{18}{section*.12}%
+\contentsline {paragraph}{\tocparagraph {}{}{Target State:}}{18}{section*.13}%
+\contentsline {paragraph}{\tocparagraph {}{}{Creation Operator:}}{18}{section*.14}%
+\contentsline {paragraph}{\tocparagraph {}{}{Annihilation Operator:}}{18}{section*.15}%
+\contentsline {paragraph}{\tocparagraph {}{}{Excited States:}}{18}{section*.16}%
+\contentsline {section}{\tocsection {}{5}{Outlook}}{18}{section.4.5}%
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Algebraic Structure of Molecular Operators}}{19}{chapter.5}%
+\contentsline {section}{\tocsection {}{1}{(Anti)Commutation Relations}}{19}{section.5.1}%
+\contentsline {section}{\tocsection {}{2}{Compositeness and Non-Canonical Behavior}}{19}{section.5.2}%
+\contentsline {section}{\tocsection {}{3}{Approximate Canonical Behavior in Physical Limits}}{20}{section.5.3}%
+\contentsline {paragraph}{\tocparagraph {}{}{Canonical vs. Non-Canonical Behavior.}}{20}{section*.17}%
+\contentsline {section}{\tocsection {}{4}{Symmetries and Conserved Quantities}}{20}{section.5.4}%
+\contentsline {section}{\tocsection {}{5}{Summary}}{21}{section.5.5}%
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Effective Field Theory (EFT) for Molecular Systems}}{23}{chapter.6}%
+\contentsline {section}{\tocsection {}{1}{From Operators to Fields: Introducing \(M_\alpha (x)\)}}{23}{section.6.1}%
+\contentsline {section}{\tocsection {}{2}{Constructing the Effective Lagrangian \(\mathcal {L}_{\mathrm {eff}}\)}}{23}{section.6.2}%
+\contentsline {subsection}{\tocsubsection {}{2.1}{Free Field Terms}}{23}{subsection.6.2.1}%
+\contentsline {subsection}{\tocsubsection {}{2.2}{Interaction Terms}}{24}{subsection.6.2.2}%
+\contentsline {section}{\tocsection {}{3}{Matching to Quantum Chemistry and Experiment}}{24}{section.6.3}%
+\contentsline {paragraph}{\tocparagraph {}{}{Sources of Matching Data}}{24}{section*.18}%
+\contentsline {paragraph}{\tocparagraph {}{}{Uncertainty Propagation}}{24}{section*.19}%
+\contentsline {paragraph}{\tocparagraph {}{}{Workflow Summary}}{24}{section*.20}%
+\contentsline {section}{\tocsection {}{4}{Power Counting and Validity}}{24}{section.6.4}%
+\contentsline {section}{\tocsection {}{5}{Feynman Rules for Molecular EFT}}{25}{section.6.5}%
+\contentsline {section}{\tocsection {}{6}{Optional: Renormalization Group Concepts}}{25}{section.6.6}%
+\contentsline {section}{\tocsection {}{}{Summary}}{25}{section*.22}%
+\contentsline {part}{Part\ 3. \enspace \noindent Applications and Outlook}{27}{part.3}%
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Path Integral Formulation and Statistical Ensembles}}{29}{chapter.7}%
+\contentsline {section}{\tocsection {}{1}{Path Integrals for Molecular Fields}}{29}{section.7.1}%
+\contentsline {subsection}{\tocsubsection {}{1.1}{Real-Time Quantum Dynamics}}{29}{subsection.7.1.1}%
+\contentsline {subsection}{\tocsubsection {}{1.2}{Imaginary Time and Thermal Ensembles}}{29}{subsection.7.1.2}%
+\contentsline {section}{\tocsection {}{2}{Statistical Mechanics of Molecular Fluids}}{29}{section.7.2}%
+\contentsline {subsection}{\tocsubsection {}{2.1}{Ideal and Interacting Gases}}{30}{subsection.7.2.1}%
+\contentsline {subsection}{\tocsubsection {}{2.2}{Phase Transitions and Symmetry Breaking}}{30}{subsection.7.2.2}%
+\contentsline {section}{\tocsection {}{3}{Reaction Dynamics from Path Integrals}}{30}{section.7.3}%
+\contentsline {subsection}{\tocsubsection {}{3.1}{Quantum Transition State Theory}}{30}{subsection.7.3.1}%
+\contentsline {subsection}{\tocsubsection {}{3.2}{Instanton Methods}}{30}{subsection.7.3.2}%
+\contentsline {subsection}{\tocsubsection {}{3.3}{Real-Time Approaches}}{30}{subsection.7.3.3}%
+\contentsline {section}{\tocsection {}{4}{Open Quantum Systems and Environmental Coupling}}{30}{section.7.4}%
+\contentsline {section}{\tocsection {}{5}{Grand Canonical Formulation}}{30}{section.7.5}%
+\contentsline {subsection}{\tocsubsection {}{5.1}{Chemical Potentials and Modified Lagrangian}}{31}{subsection.7.5.1}%
+\contentsline {subsection}{\tocsubsection {}{5.2}{Chemical Equilibrium and Particle Fluctuations}}{31}{subsection.7.5.2}%
+\contentsline {section}{\tocsection {}{}{Summary}}{31}{section*.23}%
+\contentsline {chapter}{\tocchapter {Chapter}{8}{Case Studies and Illustrative Examples}}{33}{chapter.8}%
+\contentsline {section}{\tocsection {}{1}{Example 1: A Bimolecular Reaction --- H + D \(\rightleftharpoons \) HD}}{33}{section.8.1}%
+\contentsline {section}{\tocsection {}{2}{Example 2: Ultracold Diatomic Molecules and BEC}}{33}{section.8.2}%
+\contentsline {section}{\tocsection {}{3}{Example 3: Spectroscopic Transition as Field Coupling}}{34}{section.8.3}%
+\contentsline {section}{\tocsection {}{}{Conclusion}}{34}{section*.24}%
+\contentsline {chapter}{\tocchapter {Chapter}{9}{Outlook and Future Directions}}{35}{chapter.9}%
+\contentsline {section}{\tocsection {}{1}{From Formalism to Computation}}{35}{section.9.1}%
+\contentsline {section}{\tocsection {}{2}{Relativistic and QED Extensions}}{35}{section.9.2}%
+\contentsline {section}{\tocsection {}{3}{Open Quantum Systems and Quantum Thermodynamics}}{35}{section.9.3}%
+\contentsline {section}{\tocsection {}{4}{Quantum Information and Field-Based Encoding}}{36}{section.9.4}%
+\contentsline {section}{\tocsection {}{5}{Connections to Nuclear and Condensed Matter Physics}}{36}{section.9.5}%
+\contentsline {section}{\tocsection {}{}{Final Remarks}}{36}{section*.25}%
+\contentsline {part}{\noindent Appendices}{37}{part*.26}%
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Detailed Mathematical Derivations}}{39}{appendix.A}%
+\contentsline {section}{\tocsection {}{1}{Molecular Operator Algebra Details}}{39}{section.A.1}%
+\contentsline {section}{\tocsection {}{2}{A Toy Model of Molecular Operator Construction}}{39}{section.A.2}%
+\contentsline {subsection}{\tocsubsection {}{}{Reference State}}{39}{section*.27}%
+\contentsline {subsection}{\tocsubsection {}{}{Target Molecular State}}{39}{section*.28}%
+\contentsline {subsection}{\tocsubsection {}{}{Operator Representation}}{39}{section*.29}%
+\contentsline {subsection}{\tocsubsection {}{}{Remarks}}{39}{section*.30}%
+\contentsline {section}{\tocsection {}{3}{Path Integral Formalism: Technical Details}}{39}{section.A.3}%
+\contentsline {subsection}{\tocsubsection {}{3.1}{Functional Measure}}{39}{subsection.A.3.1}%
+\contentsline {subsection}{\tocsubsection {}{3.2}{Gaussian Integrals}}{40}{subsection.A.3.2}%
+\contentsline {subsection}{\tocsubsection {}{3.3}{Influence Functional and Caldeira--Leggett Model}}{40}{subsection.A.3.3}%
+\contentsline {subsection}{\tocsubsection {}{3.4}{Instanton Fluctuation Prefactor}}{40}{subsection.A.3.4}%
+\contentsline {section}{\tocsection {}{4}{EFT Matching Examples}}{40}{section.A.4}%
+\contentsline {subsection}{\tocsubsection {}{4.1}{Scattering Length Matching}}{40}{subsection.A.4.1}%
+\contentsline {subsection}{\tocsubsection {}{4.2}{Reaction Rate Matching}}{40}{subsection.A.4.2}%
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Glossary and Notation Summary}}{41}{appendix.A}%
+\contentsline {section}{\tocsection {}{1}{General Mathematical Symbols}}{41}{section.A.1}%
+\contentsline {section}{\tocsection {}{2}{Mathematical Sets and Function Spaces}}{41}{section.A.2}%
+\contentsline {section}{\tocsection {}{3}{Spaces and States}}{41}{section.A.3}%
+\contentsline {section}{\tocsection {}{4}{Operators}}{41}{section.A.4}%
+\contentsline {section}{\tocsection {}{5}{Fields}}{41}{section.A.5}%
+\contentsline {section}{\tocsection {}{6}{Lagrangians and Partition Functions}}{42}{section.A.6}%
+\contentsline {section}{\tocsection {}{7}{Thermodynamic Quantities}}{42}{section.A.7}%
+\contentsline {section}{\tocsection {}{8}{EFT Parameters}}{42}{section.A.8}%
+\contentsline {section}{\tocsection {}{9}{Acronyms}}{42}{section.A.9}%
+\contentsline {chapter}{\tocappendix {Appendix}{B}{Advanced Techniques and Theoretical Tools}}{43}{appendix.B}%
+\contentsline {section}{\tocsection {}{1}{Renormalization Group and Scale Dependence}}{43}{section.B.1}%
+\contentsline {subsection}{\tocsubsection {}{}{Worked Example: RG Flow for a Contact Interaction}}{43}{section*.31}%
+\contentsline {section}{\tocsection {}{2}{Composite Particle Operators and Algebra}}{43}{section.B.2}%
+\contentsline {paragraph}{\tocparagraph {}{}{Motivation:}}{43}{section*.32}%
+\contentsline {paragraph}{\tocparagraph {}{}{Approaches:}}{43}{section*.33}%
+\contentsline {section}{\tocsection {}{3}{Instanton Methods in Chemical Dynamics}}{43}{section.B.3}%
+\contentsline {paragraph}{\tocparagraph {}{}{Semiclassical Reaction Rates:}}{43}{section*.34}%
+\contentsline {paragraph}{\tocparagraph {}{}{Procedure:}}{44}{section*.35}%
+\contentsline {paragraph}{\tocparagraph {}{}{Rate Formula:}}{44}{section*.36}%
+\contentsline {section}{\tocsection {}{4}{Path Integral Monte Carlo and Sampling Techniques}}{44}{section.B.4}%
+\contentsline {paragraph}{\tocparagraph {}{}{Use Case:}}{44}{section*.37}%
+\contentsline {paragraph}{\tocparagraph {}{}{Features:}}{44}{section*.38}%
+\contentsline {paragraph}{\tocparagraph {}{}{Limitations:}}{44}{section*.39}%
+\contentsline {section}{\tocsection {}{}{References and Further Reading}}{44}{section*.40}%

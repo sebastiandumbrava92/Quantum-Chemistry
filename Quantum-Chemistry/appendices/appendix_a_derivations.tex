@@ -1,0 +1,116 @@
+\appendix
+
+\chapter{Detailed Mathematical Derivations}
+\label{app:derivations}
+
+This appendix provides supplementary mathematical details for selected derivations or concepts introduced in the main text. In particular, we expand on the construction of molecular operators, the structure of the operator algebra, technical aspects of the path integral, and examples of EFT parameter matching.
+
+\section{Molecular Operator Algebra Details}
+\label{app:sec:algebra_details}
+
+As discussed in Section~\ref{sec:algebra_commutation}, the (anti)commutation relations for \( \Mop{\alpha} \) and \( \Mdag{\beta} \) resemble canonical ones only when acting on the chemical reference state \( \RefState \). For multi-molecule states, deviations from canonical algebra arise due to compositeness. Strategies to analyze these deviations include:
+
+\begin{itemize}
+  \item Projectors onto fixed molecule-number subspaces
+  \item Cluster expansions in dilute regimes
+  \item Diagrammatic treatments of exchange-induced non-locality
+\end{itemize}
+
+Connections to composite operator formalisms in nuclear and condensed matter physics (e.g., \cite{Combescot2008}) provide further insight.
+
+\section{A Toy Model of Molecular Operator Construction}
+\label{app:toy_model_mdag}
+
+To illustrate the construction of a molecular creation operator \( \Mdag{\alpha} \), we consider a toy model based on the hydrogen molecular ion \( \mathrm{H}_2^+ \).
+
+\subsection*{Reference State}
+We assume two fixed protons at \( \pm R/2 \), and one electron in a plane-wave state:
+\[
+\RefState = a^\dagger_e(k) A^\dagger_p(+R/2) A^\dagger_p(-R/2) \vac.
+\]
+
+\subsection*{Target Molecular State}
+Using the LCAO approximation, the bound state wavefunction is:
+\[
+\Psi(\vec{r}) = \mathcal{N} \left[ \phi_{1s}(\vec{r} - \vec{R}/2) + \phi_{1s}(\vec{r} + \vec{R}/2) \right].
+\]
+
+\subsection*{Operator Representation}
+Define the creation operator:
+\[
+\Mdag{\mathrm{H}_2^+} = \int d^3 r\, \Psi(\vec{r})\, \psi^\dagger_e(\vec{r}) A^\dagger_p(+R/2) A^\dagger_p(-R/2),
+\]
+so that:
+\[
+\Mdag{\mathrm{H}_2^+} \vac = |\Psi_{\mathrm{H}_2^+} \rangle.
+\]
+
+\subsection*{Remarks}
+This construction assumes:
+\begin{itemize}
+  \item Born--Oppenheimer approximation
+  \item Neglect of antisymmetrization across nuclei
+  \item Approximate wavefunction structure
+\end{itemize}
+
+Nonetheless, it exemplifies the principle that \( \Mdag{} \) encodes a coherent bound-state superposition of constituents.
+
+\section{Path Integral Formalism: Technical Details}
+\label{app:sec:pi_details}
+
+This section elaborates on path integral results in Chapter~\ref{chap:path_integral}.
+
+\subsection{Functional Measure}
+The path integral measure \( \mathcal{D}[M^\dagger] \mathcal{D}[M] \) is defined as the continuum limit of discretized field amplitudes over spacetime.
+
+\subsection{Gaussian Integrals}
+For quadratic actions:
+\[
+S[M] = \int d^4x\, M^\dagger(x) \hat{O} M(x),
+\]
+the path integral yields:
+\[
+\int \mathcal{D}[M^\dagger] \mathcal{D}[M] \; e^{-S[M]} \propto \det(\hat{O})^{-1}.
+\]
+
+\subsection{Influence Functional and Caldeira--Leggett Model}
+Following \cite{Feynman1963, Caldeira1983}, we couple the system field \( M \) linearly to a harmonic bath \( Q_i \). Integrating out \( Q_i \) yields a nonlocal influence functional:
+\[
+S_{\text{eff}}[M] = S_{\text{sys}}[M] + S_{\text{influence}}[M],
+\]
+with real and imaginary parts encoding noise and dissipation, respectively. This is central to open system dynamics and decoherence.
+
+\subsection{Instanton Fluctuation Prefactor}
+For a tunneling rate:
+\[
+\Gamma \approx A(\beta) e^{-S_{\text{inst}}/\hbar},
+\]
+the prefactor \( A(\beta) \) is computed from the determinant of the second variation of the Euclidean action:
+\[
+\det\left(-\frac{\delta^2 S_E}{\delta q^2}\right) \quad \text{(via zeta function or Gel'fand--Yaglom)}.
+\]
+
+\section{EFT Matching Examples}
+\label{app:sec:matching_examples}
+
+\subsection{Scattering Length Matching}
+A contact interaction \( \lambda \) yields an EFT scattering amplitude:
+\[
+\mathcal{A} = -\lambda.
+\]
+Matching to s-wave scattering theory:
+\[
+\mathcal{A} = \frac{4\pi\hbar^2 a_s}{m},
+\]
+gives:
+\[
+\lambda = \frac{4\pi\hbar^2 a_s}{m}.
+\]
+
+\subsection{Reaction Rate Matching}
+The reaction vertex \( \kappa \) contributes:
+\[
+\mathcal{M} = -\ii \kappa,
+\]
+and the rate is proportional to \( |\kappa|^2 \). This can be matched to experimental values or quantum chemistry simulations of transition probabilities using potential energy surfaces.
+

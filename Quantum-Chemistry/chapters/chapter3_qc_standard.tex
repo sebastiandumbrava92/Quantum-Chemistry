@@ -1,0 +1,130 @@
+% !TEX root = ../QChem_QFT_Book.tex
+% --- Chapter 3: Quantum Chemistry — Standard Frameworks Revisited ---
+
+\chapter{Quantum Chemistry — Standard Frameworks Revisited}
+\label{chap:qc_standard}
+
+Building upon the foundational ideas introduced in \cref{chap:foundations}, we now revisit the standard frameworks of quantum chemistry (QC). Quantum chemistry has proven remarkably successful at describing the structure, properties, and behavior of molecules. Our aim in this chapter is not to exhaustively review these methods—comprehensive treatments can be found in texts such as \cite{Szabo1996, Helgaker2000, Jensen2017}—but to examine their key assumptions and formal structures through the lens of quantum field theory and second quantization. We highlight the conceptual overlaps with QFT, the implicit field-theoretic ideas already embedded within QC, and the motivations for developing a more unified molecular operator framework.
+
+\section{The Born-Oppenheimer Approximation as Effective Theory}
+\label{sec:qc_bo_approx}
+
+The most foundational approximation in quantum chemistry is the \emph{Born-Oppenheimer approximation} (BOA) \cite{Born1927}, which exploits the mass disparity between electrons (\(m_e\)) and nuclei (\(M_N\)). Since nuclei are much heavier, they move more slowly, allowing the electronic and nuclear motions to be approximately decoupled.
+
+The full non-relativistic Hamiltonian (excluding spin) is:
+\begin{equation}
+	\Ham = \hat{T}_N + \hat{T}_e + \hat{V}_{NN} + \hat{V}_{ee} + \hat{V}_{Ne},
+	\label{eq:full_hamiltonian}
+\end{equation}
+where \(\hat{T}_N\) and \(\hat{T}_e\) are the nuclear and electronic kinetic energy operators, and the \(V\) terms represent Coulomb interactions.
+
+The BOA posits that the total wavefunction can be approximately factorized:
+\[
+\Psi(\vb{R}, \vb{r}) \approx \chi(\vb{R}) \psi_{\vb{R}}(\vb{r}),
+\]
+where \(\vb{R}\) are nuclear coordinates and \(\vb{r}\) are electronic coordinates. The electronic wavefunction \(\psi_{\vb{R}}(\vb{r})\) satisfies:
+\begin{equation}
+	\Ham_{\text{el}}(\vb{R}) \psi_{\vb{R}}(\vb{r}) = E_{\text{el}}(\vb{R}) \psi_{\vb{R}}(\vb{r}),
+	\label{eq:electronic_schrodinger}
+\end{equation}
+with
+\[
+\Ham_{\text{el}}(\vb{R}) = \hat{T}_e + \hat{V}_{ee} + \hat{V}_{Ne}(\vb{R}).
+\]
+The electronic energy \(E_{\text{el}}(\vb{R})\) plus nuclear repulsion defines the \emph{potential energy surface} (PES):
+\[
+U(\vb{R}) = E_{\text{el}}(\vb{R}) + V_{NN}(\vb{R}).
+\]
+
+From a QFT perspective, this is an \emph{effective theory} for the nuclear degrees of freedom, obtained by integrating out the fast electronic modes. Corrections to BOA arise in regions of near-degeneracy and lead to important non-adiabatic effects, often essential in photochemistry.
+
+\section{Electronic Structure Methods: HF, CI, CC, MPn, DFT}
+\label{sec:qc_electronic_structure}
+
+Within the BOA, solving \cref{eq:electronic_schrodinger} is the main task of electronic structure theory. The Hamiltonian for \(N_e\) electrons (omitting \(\vb{R}\)-dependence) is:
+\begin{equation}
+	\Ham_{\text{el}} = \sum_{ij} h_{ij} \adag{i} \aop{j} + \frac{1}{2} \sum_{ijkl} g_{ijkl} \adag{i} \adag{j} \aop{l} \aop{k},
+	\label{eq:Hel_2ndQ}
+\end{equation}
+where \(\adag{i}, \aop{i}\) are fermionic operators, and \(h_{ij}, g_{ijkl}\) are one- and two-electron integrals.
+
+\paragraph{Hartree-Fock (HF):}
+A mean-field theory in which the wavefunction is approximated by a single Slater determinant \(\ket{\Phi_0}\). Orbitals are optimized to minimize the energy:
+\[
+E_{\text{HF}} = \mel{\Phi_0}{\Ham_{\text{el}}}{\Phi_0}.
+\]
+
+\paragraph{Post-HF Methods:}
+These recover \emph{electron correlation}:
+\begin{itemize}
+	\item \textbf{CI}: Linear combination of excited Slater determinants,
+	\[
+	\ket{\Psi_{\text{CI}}} = C_0 \ket{\Phi_0} + \sum_{ia} C_i^a \ket{\Phi_i^a} + \dots
+	\]
+	\item \textbf{CC}: Exponential ansatz \(\ket{\Psi_{\text{CC}}} = \ee^{\hat{T}} \ket{\Phi_0}\), where \(\hat{T}\) contains single, double, etc., excitations.
+	\item \textbf{MPn}: Perturbative expansion of correlation energy.
+\end{itemize}
+
+\paragraph{Density Functional Theory (DFT):}
+Grounded in the Hohenberg-Kohn theorems \cite{Hohenberg1964}, DFT recasts the problem in terms of the electron density \(\rho(\vb{r})\). The Kohn-Sham approach maps to a non-interacting system. All complexities are absorbed into the exchange-correlation functional \(E_{\text{xc}}[\rho]\).
+
+\medskip
+
+These methods rely on second quantization for electrons but fix the number of particles and do not invoke a full field-theoretic picture. The many-body state of the molecule is represented in a fixed-particle Hilbert space, rather than as an excitation in a quantum field.
+
+\section{Relativistic Effects in Quantum Chemistry}
+\label{sec:qc_relativistic}
+
+Heavy atoms require relativistic treatment. The Dirac equation underpins \emph{Dirac-Hartree-Fock} methods using four-spinors.
+
+Approximate schemes like ZORA \cite{vanLenthe1993} and DKH \cite{Douglas1974, Hess1986} simplify the relativistic problem. Perturbative QED corrections are added:
+\begin{itemize}
+	\item \textbf{Self-energy}: Electron interacts with its own field.
+	\item \textbf{Vacuum polarization}: Alters Coulomb potential.
+	\item \textbf{Breit interaction}: Relativistic electron-electron interaction.
+\end{itemize}
+
+These effects are incorporated additively, as corrections to a non-relativistic or semi-relativistic framework. In contrast, QED treats all such processes as consequences of a single local interaction Lagrangian. From a field-theoretic perspective, this integration is conceptually cleaner and more unified, though computationally demanding.
+
+\section{Light-Matter Interactions: Semi-Classical vs. QED}
+\label{sec:qc_light_matter}
+
+In standard spectroscopy, light is treated classically. The interaction Hamiltonian is:
+\[
+\hat{H}_{\text{int}}(t) = - \hat{\boldsymbol{\mu}} \cdot \vb{E}(t),
+\]
+with \(\hat{\boldsymbol{\mu}}\) the dipole operator and \(\vb{E}(t)\) the classical field. This semi-classical theory describes absorption and stimulated emission via time-dependent perturbation theory.
+
+However, \emph{spontaneous emission} requires quantization of the electromagnetic field. In QED, this is encoded in:
+\[
+\Lag_{\text{int}} = -e \bar{\psi} \gamma^\mu \psi A_\mu,
+\]
+which fully describes photon absorption, emission, and scattering. The operator formalism of QED accounts for the vacuum field and field fluctuations, which have no analog in a purely semi-classical description.
+
+Although quantum optics and cavity QED extend QC to include such effects, they are typically formulated externally to the standard electronic structure pipeline.
+
+\section{Identifying Gaps and QFT Connections}
+\label{sec:qc_gaps_connections}
+
+Standard QC and QFT are deeply intertwined:
+
+\paragraph{Connections:}
+\begin{itemize}
+	\item Fermionic operator algebra underpins CI, CC, and MPn methods.
+	\item Relativistic QC starts from the Dirac field.
+	\item Quantized light is essential for spontaneous emission.
+	\item The BOA is an effective theory, conceptually analogous to integrating out fast modes.
+\end{itemize}
+
+\paragraph{Gaps:}
+\begin{itemize}
+	\item \textbf{Emergence}: Molecules are treated as fixed inputs, not emergent bound states from underlying fields.
+	\item \textbf{Fragmentation}: Structure, dynamics, and statistics are handled via distinct and sometimes inconsistent methods.
+	\item \textbf{Relativistic and QED corrections}: Added perturbatively, not derived from a unified framework.
+	\item \textbf{Fixed particle number}: No second quantization of molecules; no operator algebra for molecular degrees of freedom.
+\end{itemize}
+
+\medskip
+
+These gaps motivate the development of a field-theoretic formalism in which molecules are composite excitations of underlying fields, represented by operators \(\Mdag{\alpha}, \Mop{\alpha}\), analogous to creation and annihilation operators in QFT. In the next chapter, we will define these operators formally and lay the groundwork for a molecular operator algebra.
+

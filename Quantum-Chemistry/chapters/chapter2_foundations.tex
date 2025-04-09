@@ -1,0 +1,131 @@
+% !TEX root = ../QChem_QFT_Book.tex
+% --- Chapter 2: Mathematical and Physical Foundations ---
+
+\chapter{Mathematical and Physical Foundations}
+\label{chap:foundations}
+
+Before constructing our framework for describing molecules using field-theoretic concepts, we must establish the necessary mathematical and physical foundations. This chapter reviews key concepts from quantum mechanics, second quantization, and quantum field theory that underpin the formalism developed in subsequent chapters. Our focus is on the tools and ideas most relevant to systems of identical particles, variable particle numbers, and the emergence of composite structures from fundamental fields. We assume familiarity with graduate-level quantum mechanics; this chapter serves primarily to establish notation and review concepts essential for our specific approach.
+
+\section{Hilbert Space, Fock Space, and Occupation Number Representation}
+\label{sec:foundations_fock_space}
+
+The state of a quantum mechanical system is represented by a vector in a Hilbert space \(\Hilb\). For a single particle, this space might be \(L^2(\mathbb{R}^3)\), the space of square-integrable functions over position coordinates. For a system of \(N\) distinguishable particles, the Hilbert space is the tensor product of single-particle spaces:
+\[
+\Hilb_N = \Hilb_1 \otimes \Hilb_1 \otimes \dots \otimes \Hilb_1 \quad \text{(\(N\) times)}.
+\]
+
+However, chemistry deals predominantly with identical particles (e.g., electrons or identical nuclei). The quantum description of such systems must incorporate permutational symmetry. For \(N\) identical bosons (integer-spin particles), the state vector must be symmetric under particle exchange. For \(N\) identical fermions (half-integer spin particles like electrons), the state vector must be antisymmetric. These symmetry constraints restrict the accessible states to specific subspaces of \(\Hilb_N\), denoted \(\Hilb_N^{(S)}\) for bosons and \(\Hilb_N^{(A)}\) for fermions.
+
+Many physical processes—especially chemical reactions or systems in contact with reservoirs—involve variable particle number. A fixed-\(N\) Hilbert space is therefore insufficient. The appropriate mathematical structure is the \emph{Fock space} \(\Fock\), defined as the direct sum of all \(N\)-particle Hilbert spaces:
+\begin{equation}
+	\Fock^{(S/A)} = \bigoplus_{N=0}^{\infty} \Hilb_N^{(S/A)}.
+	\label{eq:fock_space_def}
+\end{equation}
+Here, \(\Hilb_0^{(S/A)}\) is the one-dimensional vacuum space, spanned by the \emph{vacuum state} \(\ket{0}\), which contains no particles of the type being described. This vacuum is distinct from the QFT vacuum introduced later.
+
+A natural basis for Fock space is the \emph{occupation number basis}. Let \(\{\ket{\phi_k}\}\) be a complete orthonormal basis for the single-particle Hilbert space \(\Hilb_1\) (e.g., atomic or molecular orbitals). A basis state is specified by occupation numbers \(\ket{n_1, n_2, \dots}\), where \(n_k\) is the number of particles in orbital \(\ket{\phi_k}\). For bosons, \(n_k \in \{0,1,2,\dots\}\); for fermions, \(n_k \in \{0,1\}\) due to the Pauli exclusion principle. These basis states are automatically symmetric or antisymmetric as appropriate.
+
+\section{Second Quantization Formalism}
+\label{sec:foundations_second_quant}
+
+Second quantization provides an algebraic formalism to work efficiently within Fock space. It replaces wavefunction symmetrization with operator algebra.
+
+For each single-particle basis state \(\ket{\phi_k}\), we define:
+\begin{itemize}
+	\item The annihilation operator \(\aop{k}\): removes a particle from state \(\ket{\phi_k}\).
+	\item The creation operator \(\adag{k}\): adds a particle to state \(\ket{\phi_k}\).
+\end{itemize}
+These operators satisfy:
+\begin{itemize}
+	\item \emph{Bosons} (commutation relations):
+	\begin{align}
+		[\aop{k}, \aop{l}] &= 0, \\
+		[\adag{k}, \adag{l}] &= 0, \\
+		[\aop{k}, \adag{l}] &= \delta_{kl}.
+	\end{align}
+	\item \emph{Fermions} (anticommutation relations):
+	\begin{align}
+		\{\aop{k}, \aop{l}\} &= 0, \\
+		\{\adag{k}, \adag{l}\} &= 0, \\
+		\{\aop{k}, \adag{l}\} &= \delta_{kl}.
+	\end{align}
+\end{itemize}
+These relations enforce the correct statistics. For fermions, the Pauli exclusion principle is built in: \((\adag{k})^2 = 0\).
+
+Physical observables are expressed in terms of these operators. For example:
+\begin{itemize}
+	\item The number operator for orbital \(k\): \(\hat{N}_k = \adag{k} \aop{k}\).
+	\item The total number operator: \(\hat{N} = \sum_k \hat{N}_k\).
+	\item A one-body operator (e.g., kinetic energy): 
+	\[
+	\hat{T} = \sum_{k,l} T_{kl} \adag{k} \aop{l}, \quad T_{kl} = \mel{\phi_k}{\hat{T}_1}{\phi_l}.
+	\]
+	\item A two-body operator (e.g., Coulomb repulsion):
+	\[
+	\hat{V} = \frac{1}{2} \sum_{klmn} V_{klmn} \adag{k} \adag{l} \aop{n} \aop{m}, \quad
+	V_{klmn} = \mel{\phi_k \phi_l}{\hat{V}_{12}}{\phi_m \phi_n}.
+	\]
+\end{itemize}
+
+Second quantization allows us to write the full many-particle Hamiltonian in a compact and symmetric form, ideal for systems with changing particle number or indistinguishable particles.
+
+\section{Essentials of Quantum Field Theory (QED Sketch)}
+\label{sec:foundations_qft}
+
+Quantum field theory (QFT) generalizes second quantization to a relativistic, spacetime setting. The basic entities are quantum fields, such as:
+\begin{itemize}
+	\item \(\psi(x)\): the Dirac spinor field for electrons/positrons,
+	\item \(A^\mu(x)\): the electromagnetic four-vector potential for photons.
+\end{itemize}
+These fields are operator-valued functions of spacetime coordinates \(x = (ct, \vb{x})\).
+
+The dynamics are derived from a Lagrangian density \(\Lag(\phi, \partial_\mu \phi)\). For QED:
+\begin{equation}
+	\Lag_{\text{QED}} = \Lag_{\text{Dirac}} + \Lag_{\text{Maxwell}} + \Lag_{\text{int}},
+\end{equation}
+where:
+\begin{align*}
+	\Lag_{\text{Dirac}} &= \bar{\psi}(x)(i\hbar c \gamma^\mu \partial_\mu - m_e c^2)\psi(x), \\
+	\Lag_{\text{Maxwell}} &= -\frac{1}{4} F_{\mu\nu}F^{\mu\nu}, \\
+	\Lag_{\text{int}} &= -e \bar{\psi}(x)\gamma^\mu \psi(x) A_\mu(x).
+\end{align*}
+The Hamiltonian is obtained via Legendre transformation. Quantizing the fields leads to creation and annihilation operators associated with field excitations (particles).
+
+The QFT vacuum \(\vac\) is the ground state of the full Hamiltonian. It contains virtual fluctuations and is annihilated by all field-mode operators: \(\aop{k} \vac = 0\).
+
+\section{Bound States in Quantum Field Theory}
+\label{sec:foundations_bound_states}
+
+Bound states (e.g., atoms, molecules, positronium) appear in QFT as eigenstates of the full interacting Hamiltonian with energies below the continuum. They are not fundamental particles but emergent excitations of multiple fields.
+
+QFT describes bound states using \emph{interpolating operators}. An operator \(\hat{O}_B(x)\) is said to interpolate a bound state \(\ket{B}\) if:
+\[
+\mel{B}{\hat{O}_B^\dagger(0)}{\vac} \neq 0.
+\]
+Such operators are constructed from combinations of fundamental fields that match the quantum numbers of the bound state.
+
+For example, positronium can be created by:
+\[
+\hat{O}_{p\text{Ps}}(x) \propto \bar{\psi}(x) \gamma^5 \psi(x).
+\]
+This creates a superposition that includes the positronium ground state plus continuum contributions.
+
+This idea motivates our construction of the molecular creation operator \(\Mdag{\alpha}\), which plays a role analogous to \(\hat{O}_B^\dagger\) but within a chemistry-relevant QFT framework.
+
+\section{A Note on Notation and Conventions}
+\label{sec:foundations_notation}
+
+We aim for consistent notation throughout the book. Key conventions include:
+\begin{itemize}
+	\item \textbf{Atomic units} (\(\hbar = m_e = e = 1\)) are used in quantum chemistry sections.
+	\item \textbf{Natural units} (\(\hbar = c = 1\)) are used in QFT sections.
+	\item Roman indices (\(i, j\)) range over spatial dimensions; Greek indices (\(\mu, \nu\)) over spacetime.
+	\item We adopt the mostly-minus metric signature: \((+,-,-,-)\).
+\end{itemize}
+
+These conventions are summarized in Appendix~\ref{app:notation}, which serves as a reference glossary for symbols and acronyms used throughout the text. Readers unfamiliar with QFT conventions may consult \cite{Peskin1995, Srednicki2007, Zee2010} for background.
+
+\bigskip
+
+With these foundations in place, we now turn to standard quantum chemistry, highlighting the points of contact and divergence with the field-theoretic view.
+
